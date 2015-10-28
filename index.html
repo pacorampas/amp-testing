@@ -1,0 +1,70 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, AMPs</title>
+    <link rel="canonical" href="http://example.ampproject.org/article-metadata.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content everywhere",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"
+        ]
+      }
+    </script>
+    <style>
+    	body {
+    		opacity: 0
+    	}
+
+    	header {
+    		height: 56px;
+    		padding: 0 26px;
+    		line-height: 56px;
+    		background: #eee;
+    	}
+
+    	header h1 {
+    		font-size: 32px;
+    		margin: 0;
+    	}
+
+    	main {
+    		max-width: 900px;
+    		margin: 0 auto;
+    	}
+	</style>
+	<noscript><style>body {opacity: 1}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+  </head>
+  <body>
+  	<header>
+  		<h1>Hola El Mundo!</h1>
+  	</header>
+  	<main>
+	  	<article>
+	  		<h2>AMP Video - local</h2>
+	  		<amp-video
+		      src="//C:\Users\fantonio.rampas\Documents\sources\amp-testing\SampleVideo_1080x720_1mb.mp4"
+		      width="16"
+		      height="9"
+		      layout="responsive"
+		      controls></amp-video>
+		</article>
+		<article>
+			<h2>AMP Video - iframe</h2>
+			<amp-iframe width=300 height=300
+		      sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+		      layout="responsive"
+		      frameborder="0"
+		      src="https://www.youtube.com/embed/C0DPdy98e4c">
+		  	</amp-iframe>
+		</article>
+  	</main>
+  </body>
+</html>
