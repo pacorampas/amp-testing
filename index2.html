@@ -1,0 +1,149 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, AMPs</title>
+    <link rel="canonical" href="http://example.ampproject.org/article-metadata.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content everywhere",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"
+        ]
+      }
+    </script>
+    <style>
+    	body {
+    		opacity: 0
+    	}
+
+    	header {
+    		height: 56px;
+    		padding: 0 26px;
+    		line-height: 56px;
+    		background: #1F77B5;
+    	}
+
+    	header h1 {
+    		float: left;
+    		color: #fff;
+    		font-size: 32px;
+    		margin: 0;
+    	}
+
+    	main {
+    		max-width: 900px;
+    		margin: 0 auto;
+    	}
+
+    	.mega {
+    		text-align: center;
+    	}
+
+    	.mega amp-ad {
+    		display: inline-block;
+    		background: #eee;
+    	}
+
+    	.video {
+    		float: left;
+    		width: 100%;
+    	}
+
+    	.roba {
+    		float: left;
+    		width: 100%;
+    		margin-top: 66px;
+    	}
+
+    	.roba-content {
+    		width: 300px;
+    		height: 300px;
+    		margin: 0 auto;
+    		background: #eee;
+    	}
+
+    	.row::after {
+    		content: "";
+    		display: table;
+    		clear: both;
+    	}
+
+    	nav ul {
+    		float: right;
+    		margin: 0;
+    		padding: 0;
+    		list-style: none;
+    	}
+
+    	nav a {
+    		color: #fff;
+    	}
+
+    	@media (min-width: 918px) {
+		   .video {
+		    	width: 600px;
+		    }
+
+		    .roba {
+		    	width: auto;
+		    }
+		}
+	</style>
+	<noscript><style>body {opacity: 1}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+  </head>
+  <body>
+  	<div class="mega">
+  		<amp-ad width=990 height=90
+		    type="doubleclick"
+		    data-slot="/99071977/mun/sociedad/n"
+		    json='{"targeting":{"p":["m"]}}'>
+		</amp-ad>
+  	</div>
+  	<header>
+  		<h1>Hola El Mundo!</h1>
+  		<nav>
+  			<ul>
+  				<li><a href="video-600px.html">Video a 600px</a></li>
+  			</ul>
+  		</nav>
+  	</header>
+  	<main>
+	  	<div class="row">
+		  	<article class="video">
+		  		<h2>AMP iframe</h2>
+		  		<article>
+					<amp-iframe width=300 height=300
+				      sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+				      layout="responsive"
+				      frameborder="0"
+				      src="https://www.youtube.com/embed/C0DPdy98e4c">
+				  	</amp-iframe>
+				</article>
+			</article>
+			<div class="roba">
+				<div class="roba-content">
+					<amp-ad width=300 height=300
+					    type="doubleclick"
+					    data-slot="/99071977/mun/sociedad/n"
+					    json='{"targeting":{"p":["r"]}}'>
+					</amp-ad>
+				</div>
+			</div>
+		</div>
+
+		<!--amp-video
+			src="//C:\Users\fantonio.rampas\Documents\sources\amp-testing\SampleVideo_1080x720_1mb.mp4"
+			width="16"
+			height="9"
+			layout="responsive"
+			controls></amp-video-->
+  	</main>
+  </body>
+</html>

@@ -16,134 +16,268 @@
         ]
       }
     </script>
-    <style>
-    	body {
-    		opacity: 0
-    	}
+	  <style>body {opacity: 0}</style><noscript><style>body {opacity: 1}</style></noscript>
+    <style amp-custom>
+      body {
+        opacity: 0;
+      }
 
-    	header {
-    		height: 56px;
-    		padding: 0 26px;
-    		line-height: 56px;
-    		background: #1F77B5;
-    	}
+      .hidden-content {
+          position: absolute;
+          height: 1px;
+          width: 1px;
+          overflow: hidden;
+          clip: rect(1px, 1px, 1px, 1px);
+          clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+      }
 
-    	header h1 {
-    		float: left;
-    		color: #fff;
-    		font-size: 32px;
-    		margin: 0;
-    	}
+      /* HEADER */
+      .container-header {
+          height: 60px;
+          padding-left: 10px;
+          line-height: 56px;
+      }
 
-    	main {
-    		max-width: 900px;
-    		margin: 0 auto;
-    	}
+      .logo {
+          display: block;
+          float: left;
+          width: 166px;
+          height: 48px;
+          padding: 7px 0;
+          background: url('http://estaticos.elmundo.es/assets/mobile/master/img/nueva-cabecera/elmundo-mobile.png') no-repeat transparent 0 50%;
+          background-size: 100%;
+      }
 
-    	.mega {
-    		text-align: center;
-    	}
+      nav {
+          float: right;
+          margin: 0;
+      }
 
-    	.mega amp-ad {
-    		display: inline-block;
-    		background: #eee;
-    	}
+      nav ul {
+          float: right;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+      }
 
-    	.video {
-    		float: left;
-    		width: 100%;
-    	}
+      nav ul li {
+          float: left;
+          border-left: 1px solid #E5E5E5;
+      }
 
-    	.roba {
-    		float: left;
-    		width: 100%;
-    		margin-top: 66px;
-    	}
+      nav a {
+          display: block;
+          width: 60px;
+          height: 60px;
+          padding-top: 6px;
+          color: #333;
+          font-size: 12px;
+          line-height: 1.2;
+          text-align: center;
+          text-decoration: none;
+          box-sizing: border-box;
+      }
 
-    	.roba-content {
-    		width: 300px;
-    		height: 300px;
-    		margin: 0 auto;
-    		background: #eee;
-    	}
+      nav a:hover {
+          color: #74D8F9;
+      }
 
-    	.row::after {
-    		content: "";
-    		display: table;
-    		clear: both;
-    	}
+      .container-breadcrumbs {
+          clear: both;
+          position: relative;
+          background-color: #1F77B5;
+          z-index: 1;
+          height: 48px;
+          line-height: 48px;
+      }
 
-    	nav ul {
-    		float: right;
-    		margin: 0;
-    		padding: 0;
-    		list-style: none;
-    	}
+      .container-breadcrumbs ul {
+          list-style: none;
+          margin: 0;
+          white-space: nowrap;
+          padding: 0 0 0 16px;
+      }
 
-    	nav a {
-    		color: #fff;
-    	}
+      .container-breadcrumbs ul li {
+          display: inline-block;
+      }
 
-    	@media (min-width: 918px) {
-		   .video {
-		    	width: 600px;
-		    }
+      .container-breadcrumbs ul li:after {
+          content: "\203A";
+          color: #fff;
+      }
 
-		    .roba {
-		    	width: auto;
-		    }
-		}
-	</style>
-	<noscript><style>body {opacity: 1}</style></noscript>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
+      .container-breadcrumbs ul li:last-child:after {
+          display: none;
+      }
+
+      .container-breadcrumbs ul li a {
+          display: inline-block;
+          font-size: 14px;
+          color: #fff;
+          text-decoration: none;
+      }
+
+
+      /* CONTENT */
+      main {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .mega {
+          margin: 20px auto;
+        text-align: center;
+      }
+
+      .mega amp-ad {
+        display: inline-block;
+        background: #eee;
+      }
+
+      article {
+          padding: 30px 16px 0 16px;
+          box-sizing: border-box;
+      }
+
+      .kicker {
+          font-size: 16px;
+          font-family: "RobotoCondensed", Arial, sans-serif, helvetica;
+          display: inline;
+          text-transform: uppercase;
+          font-weight: 600;
+      }
+
+      .kicker + .kicker {
+          font-weight: 300;
+          text-transform: none;
+      }
+
+      article h1 {
+          font-family: "DroidSerifBold", Georgia;
+          font-size: 28px;
+      }
+
+      article p {
+          font-family: "Roboto", Arial, sans-serif, helvetica;
+          line-height: 28px;
+          font-size: 18px;
+          color: #333;
+          margin-bottom: 40px;
+      }
+
+      .roba {
+          margin: 20px -16px;
+      }
+
+      .roba amp-ad {
+          display: block;
+        margin: 0 auto;
+        background: #eee;
+      }
+
+      /* ICON */
+      .icon {
+          display: block;
+          width: 32px;
+          height: 32px;
+          margin: 0 auto;
+          background-image: url('http://estaticos02.elmundo.es/assets/v2/img/sprites/icon-sc7f8dc4726.png');
+          background-repeat: no-repeat;
+      }
+
+      .icon.icon-usuario {
+          background-position: 0 -3934px;
+      }
+
+      .icon.icon-usuario:hover {
+          background-position: 0 -3902px;
+      }
+
+      .icon.icon-menu {
+          background-position: 0 -2502px;
+      }
+
+      .icon.icon-menu:hover {
+          background-position: 0 -2470px;
+      }
+    </style>
+
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script async src="https://cdn.ampproject.org/v0.js" development></script>
+    <!--script async src="js.js"></script-->
   </head>
   <body>
-  	<div class="mega">
-  		<amp-ad width=990 height=90
-		    type="doubleclick"
-		    data-slot="/99071977/mun/sociedad/n"
-		    json='{"targeting":{"p":["m"]}}'>
-		</amp-ad>
-  	</div>
   	<header>
-  		<h1>Hola El Mundo!</h1>
-  		<nav>
-  			<ul>
-  				<li><a href="video-600px.html">Video a 600px</a></li>
-  			</ul>
-  		</nav>
+      <div class="container-header">
+    		<div class="logo">
+          <a href="#" title="Diario El Mundo">
+            <span class="hidden-content">El Mundo</span>
+          </a>
+        </div>
+    		<nav>
+    			<ul>
+    				<li>
+              <a href="#">
+                <i class="icon icon-usuario"></i>
+                Accede
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="icon icon-menu"></i>
+                Menu
+              </a>
+            </li>
+    			</ul>
+    		</nav>
+      </div>
+      <div class="container-breadcrumbs">
+        <ul>
+          <li>
+            <a href="#">Inicio</a>
+          </li>
+          <li>
+            <a href="#">España</a>
+          </li>
+          <li>
+            <a href="#">Comunidad Valenciana</a>
+          </li>
+          <li>
+            <a href="#">Alicante</a>
+          </li>
+        </ul>
+      </div>
   	</header>
+    <div class="mega">
+      <amp-ad width=320 height=53
+        type="doubleclick"
+        data-slot="/99071977/mun/sociedad/n"
+        json='{"targeting":{"p":["m"]}}'>
+      </amp-ad>
+    </div>
   	<main>
-	  	<div class="row">
-		  	<article class="video">
-		  		<h2>AMP iframe</h2>
-		  		<article>
-					<amp-iframe width=300 height=300
-				      sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
-				      layout="responsive"
-				      frameborder="0"
-				      src="https://www.youtube.com/embed/C0DPdy98e4c">
-				  	</amp-iframe>
-				</article>
-			</article>
-			<div class="roba">
-				<div class="roba-content">
-					<amp-ad width=300 height=300
-					    type="doubleclick"
-					    data-slot="/99071977/mun/sociedad/n"
-					    json='{"targeting":{"p":["r"]}}'>
-					</amp-ad>
-				</div>
-			</div>
-		</div>
-
-		<!--amp-video
-			src="//C:\Users\fantonio.rampas\Documents\sources\amp-testing\SampleVideo_1080x720_1mb.mp4"
-			width="16"
-			height="9"
-			layout="responsive"
-			controls></amp-video-->
+	  	<article class="news-item">
+        <h2 class="kicker">CORRUPCIÓN</h2>
+        <span class="kicker">Ambos arrastran varias causas judiciales</span>
+	  		<h1>Juan Ferri a Enrique Ortiz: 'Tú y yo acabaremos en la cárcel'</h1>		  		
+				<amp-iframe width=300 height=300
+			      sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+			      layout="responsive"
+			      frameborder="0"
+			      src="https://www.youtube.com/embed/C0DPdy98e4c">
+			  </amp-iframe>
+        <p>
+          Amigos y socios, <a href="http://www.elmundo.es/comunidad-valenciana/2015/10/11/5619568de2704efb738b45ac.html">Juan Ferri</a> y <a href="http://www.elmundo.es/comunidad-valenciana/2014/06/22/53a5d331268e3e2c668b4586.html">Enrique Ortiz</a> son dos de los empresarios alicantinos colocados en el punto de mira de la Justicia. Ambos arrastran<strong> varias causas judiciales por presuntas irregularidades</strong> cometidas en operaciones realizadas de la mano de las antiguas cajas de ahorros.
+        </p>
+        <div class="roba">
+          <amp-ad width=300 height=300
+              type="doubleclick"
+              data-slot="/99071977/mun/sociedad/n"
+              json='{"targeting":{"p":["r"]}}'>
+          </amp-ad>
+        </div>
+		  </article>
   	</main>
   </body>
 </html>
